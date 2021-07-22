@@ -92,6 +92,8 @@ const form = document.getElementById('entrada');
 form.addEventListener('submit', (event) =>{ 
     event.preventDefault()
     let data = submittedData.value
+
+    // Ver se a opcao de entrada do usuario é propria ou pre-Setada
     if(data === 'data-user'){
         modalContainer.classList.add('show')
         modalContainer.classList.remove('hide')
@@ -103,9 +105,10 @@ form.addEventListener('submit', (event) =>{
 
 // Muda o background e a data pre-setada
 var wallpaper = document.body.style.backgroundImage;
+
+
 function BackGround(dataPre){
     let anoAtual = new Date().getFullYear()
-
     let checkTempo = tempoPassa()
     if(checkTempo < 0){ 
         ++anoAtual
@@ -115,14 +118,14 @@ function BackGround(dataPre){
 
     switch (preSet) {
         case 1:
-            wallpaper = "url('./img/ano-novo.jpg')";
             targetDay = `1 Jan ${anoAtual}`
+            wallpaper = "url('./img/ano-novo.jpg')";
             inicio(targetDay)
         break;
             
         case 2:
-            wallpaper = "url('./img/carnaval.jpg')";
             targetDay = `1 Feb ${anoAtual}`
+            wallpaper = "url('./img/carnaval.jpg')";
             inicio(targetDay)
         break;
                 
