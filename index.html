@@ -21,31 +21,34 @@
     </header>
     <section id="main">
         <main>
-            <form id="entrada" onsubmit="input()">
+            <form id="entrada">
                 <select name="tipo-data" id="tipo-data">
-                    <option value="" disabled selected>Escolher minha data</option>
+                    <option value="" disabled selected>
+                        Escolher minha data
+                    </option>
                     <optgroup label="Sua Data">
                         <option value="data-user">Outra Data</option>
                     </optgroup>
                     <optgroup label="Feriados Brasileiros">
-                        <option value="1 Jan">Ano Novo</option>
-                        <option value="1 Feb">Carnaval</option>
-                        <option value="15 Apr">Sexta-feira Santa</option>
-                        <option value="21 Apr">Tiradentes</option>
-                        <option value="1 May">Dia do Trabalho</option>
-                        <option value="7 Set">Independência do Brasil</option>
-                        <option value="12 Out">Nossa Senhora Aparecida</option>
-                        <option value="2 Nov">Finados</option>
-                        <option value="15 Nov">Proclamação da República</option>
-                        <option value="25 Dec">Natal</option>
+                        <option value="1">Ano Novo</option>
+                        <option value="2">Carnaval</option>
+                        <option value="3">Sexta-feira Santa</option>
+                        <option value="4">Tiradentes</option>
+                        <option value="5">Dia do Trabalho</option>
+                        <option value="6">Independência do Brasil</option>
+                        <option value="7">Nossa Senhora Aparecida</option>
+                        <option value="8">Finados</option>
+                        <option value="9">Proclamação da República</option>
+                        <option value="10">Natal</option>
                     </optgroup>
                 </select>
-                    <button id="btn-select">Enviar</button>
+                    <button id="btn-select" type="submit">Enviar</button>
             </form>
-            <div class="modal-container">
+
+            <div class="modal-container hide">
                 <div class="modal-header">
-                    <h2>Entre com a data</h2>
-                    <span class="close">&times;</span>
+                    <h2>Minha data</h2>
+                    <p class="close">&times;</p>
                 </div>
                 <div class="modal-body">
                     <form action="" id="input-form">
@@ -53,18 +56,18 @@
                             <input placeholder="Dia" type="number" name="" min="1" max="31" id="input-dia">
                             <select placeholder="Mês" name="input-mes" id="input-mes">
                                 <option value="" disabled selected>Mês</option>
-                                <option value="1">Janeiro</option>
-                                <option value="2">Fevereiro</option>
-                                <option value="3">Março</option>
-                                <option value="4">Abril</option>
-                                <option value="5">Maio</option>
-                                <option value="6">Junho</option>
-                                <option value="7">Julho</option>
-                                <option value="8">Agosto</option>
-                                <option value="9">Setembro</option>
-                                <option value="10">Outubro</option>
-                                <option value="11">Novembro</option>
-                                <option value="12">Dezembro</option>
+                                <option value="Jan">Janeiro</option>
+                                <option value="Feb">Fevereiro</option>
+                                <option value="Mar">Março</option>
+                                <option value="Apr">Abril</option>
+                                <option value="May">Maio</option>
+                                <option value="Jun">Junho</option>
+                                <option value="Jul">Julho</option>
+                                <option value="Aug">Agosto</option>
+                                <option value="Sep">Setembro</option>
+                                <option value="Oct">Outubro</option>
+                                <option value="Nov">Novembro</option>
+                                <option value="Dec">Dezembro</option>
                             </select>
                             <input placeholder="Ano" type="number" name="ano" id="input-ano" min="2021" max="2100">
                         </div>
@@ -74,31 +77,32 @@
                     </form>
                 </div>
             </div>
-            <section>
+
+            <section class="countdown-container">
                 <div class="countdown" style="background-color: rgba(89, 187, 155, 0.179);">
                     <div class="tempo">
-                        <p>0</p>
-                        <p>Anos</p>
+                        <p class="timer" id="anos">0</p>
+                        <p class="timer-title">Anos</p>
                     </div>
                     <div class="tempo">
-                        <p>0</p>
-                        <p>Meses</p>
+                        <p class="timer" id="meses">0</p>
+                        <p class="timer-title">Meses</p>
                     </div>
                     <div class="tempo">
-                        <p>0</p>
-                        <p>Dias</p>
+                        <p class="timer" id="dias">0</p>
+                        <p class="timer-title">Dias</p>
                     </div>
                     <div class="tempo">
-                        <p>0</p>
-                        <p>Horas</p>
+                        <p class="timer" id="horas">0</p>
+                        <p class="timer-title">Horas</p>
                     </div>
                     <div class="tempo">
-                        <p>0</p>
-                        <p>Minutos</p>
+                        <p class="timer" id="minutos">0</p>
+                        <p class="timer-title">Minutos</p>
                     </div>
                     <div class="tempo">
-                        <p>0</p>
-                        <p>Segundos</p>
+                        <p class="timer" id="segundos">0</p>
+                        <p class="timer-title">Segundos</p>
                     </div>
                 </div>
             </section>

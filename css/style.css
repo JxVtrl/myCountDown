@@ -24,7 +24,7 @@ header{
 }
 
 main{
-    width: fit-content;
+    width: 100%;
     margin: 0 auto;
 }
 
@@ -54,38 +54,58 @@ main{
     height: 25px;
 }
 
-
+.countdown-container{
+    margin: 15px auto;
+    min-width: 200px;
+    max-width: 800px;
+    height: 200px;
+}
 
 .countdown{
-    margin-top: 15px;
-    width: 800px;
-    height: 200px; 
+    padding-top: 35px;
     display: flex;
-    justify-content: space-around;   
+    flex-wrap: wrap; 
+    justify-content: space-around; 
 }
 
 .tempo{
     height: fit-content;
-    width: fit-content;
-    margin: auto auto;
+    width: 133px;
     text-align: center;
 }
 
-.tempo p {
+.timer{
     color: white;
-    font-size: 20px;
+    font-size: 35px;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.474);
 }
 
-.modal-container{
-    display: none;
+.timer-title {
+    color: white;
+    font-size: 18px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.474);
+}
 
+.show{
+    display: block;
+}
+
+.hide{
+    display: none;
+}
+
+.modal-container{
     background-color: rgba(43, 46, 46, 0.891);
-    position: relative;
-    margin: 0 auto;
-    bottom: 120px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
     width: 250px;
     height: 150px;
+    left: 50%;
+    top: 15%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
 
 .modal-header{
@@ -95,10 +115,11 @@ main{
 
 .modal-header h2{
     color: white;
-    margin-left: 5px;
+    margin-left: 15px;
+    margin-top: 10px;
 }
 
-.modal-header span{
+.modal-header p{
     font-size: 25px;
     cursor: pointer;
 }
@@ -108,8 +129,10 @@ main{
 }
 
 #inputs-container{
+    position: relative;
     display: flex;
-    justify-content: space-around;
+    width: fit-content;
+    margin: 0 auto;
     margin-top: 20px;
 }
 
